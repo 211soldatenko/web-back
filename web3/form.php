@@ -1,6 +1,6 @@
 <head>
     <meta charset="utf-8">
-    <title> Задание 3 </title>
+    <title> Задание 4 </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="task.css">
@@ -98,7 +98,7 @@
                         <select name="ability[]" multiple="multiple" >
                             <option value="1" <?php if (in_array(1, $arr)) {
                                     print 'checked';
-                                } ?>>>Прохождение сквозь стены</option>
+                                } ?>>Прохождение сквозь стены</option>
                             <option value="2" <?php if (in_array(2, $arr)) {
                                     print 'checked';
                                 } ?>>Регенерация</option>
