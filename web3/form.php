@@ -120,6 +120,10 @@
                     <div class="form_block">
                         <input name="check" type="checkbox">
                         <span>Согласен(а) со всем</span>
+                        <?php
+                            if (!empty($messages['check']))
+                                print $messages['check'];
+                        ?>
                     </div>
                     <div class="form_block">
                         <input type="submit" value="Отправить">
