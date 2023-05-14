@@ -97,13 +97,13 @@
                         ?>
                         <select name="ability[]" multiple="multiple" >
                             <option value="1" <?php if (in_array(1, $arr)) {
-                                    print 'checked';
+                                    print 'selected';
                                 } ?>>Прохождение сквозь стены</option>
                             <option value="2" <?php if (in_array(2, $arr)) {
-                                    print 'checked';
+                                    print 'selected';
                                 } ?>>Регенерация</option>
                             <option value="3" <?php if (in_array(3, $arr)) {
-                                    print 'checked';
+                                    print 'selected';
                                 } ?>>Возможность летать</option>
                         </select>
                         <div class="error col-6">
