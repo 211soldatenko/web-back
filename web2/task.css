@@ -1,0 +1,29 @@
+.form {
+    width: 100%;
+    padding: 30px 30px;
+    margin: 15px 0;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    border: 10px dashed #802127;
+
+}
+
+.form h5 {
+    margin-bottom: 0.5em;
+}
+
+.form_block {
+    width: 100%;
+    margin: 15px 0;
+}
+
+.form_block.mod input,
+textarea,
+select {
+    width: 50%;
+    border-style: solid;
+    border-color: #802127;
+    border-radius: 7px;
+    border-width: 3px;
+    background-color: #f2f2f2;
+}
