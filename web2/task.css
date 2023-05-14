@@ -3,9 +3,6 @@
     padding: 30px 30px;
     margin: 15px 0;
     background-color: #f2f2f2;
-    border-radius: 20px;
-    border: 10px dashed #802127;
-
 }
 
 .form h5 {
@@ -22,8 +19,7 @@ textarea,
 select {
     width: 50%;
     border-style: solid;
-    border-color: #802127;
-    border-radius: 7px;
+    border-color: #0fd62d;
     border-width: 3px;
     background-color: #f2f2f2;
 }
