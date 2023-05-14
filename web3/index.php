@@ -1,8 +1,6 @@
 <?php
 header('Content-Type: text/html; charset=UTF-8');
 
-require 'ability.php';
-
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
     $messages = array();
