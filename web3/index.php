@@ -105,7 +105,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         foreach ($errors as $key => $value) {
             setcookie($key . '_error', $value, time() + 24 * 60 * 60);
         }
-        header('Location: /web-back/web3/');
+        header('Location: ./');
         exit();
     }
 
@@ -136,6 +136,6 @@ try {
     }
 
     setcookie('save', 1);
-    header('Location: /web-back/web3/');
+    header('Location: ./');
 }
 ?>

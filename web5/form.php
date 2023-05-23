@@ -138,6 +138,21 @@ if (!empty($messages)) {
                         <input type="submit" value="Отправить">
                     </div>
                 </form>
+					 <?php
+  if(empty($_SESSION['login'])){
+   echo'
+   <div class="login">
+    <p>Если у вас есть аккаунт, вы можете <a href="login.php">войти</a></p>
+   </div>';
+  }
+  else{
+    echo '
+    <div class="logout">
+      <form action="index.php" method="post">
+        <input name="logout" type="submit" value="Выйти">
+      </form>
+    </div>';
+  } ?>
             </div>
         </div>
     </div>
