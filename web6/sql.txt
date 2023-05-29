@@ -1,0 +1,53 @@
+CREATE TABLE `person` (
+  `person_id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(50) NOT NULL,
+  `email` VARCHAR(50) NOT NULL,
+  `birthDate` DATE NOT NULL,
+  `gender` VARCHAR(6) NOT NULL,
+  `numOfLimbs` INT NOT NULL,
+  `biography` VARCHAR(300),
+  PRIMARY KEY (`person_id`)
+);
+
+CREATE TABLE `ability` (
+  `ability_id` INT NOT NULL,
+  `name` VARCHAR(50) NOT NULL,
+  PRIMARY KEY (`ability_id`)
+);
+
+CREATE TABLE `personAbility` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `pers_id` INT NOT NULL,
+  `ab_id` INT NOT NULL,
+  PRIMARY KEY (`id`),
+  FOREIGN KEY (`pers_id`)  REFERENCES `person` (`person_id`),
+  FOREIGN KEY (`ab_id`)  REFERENCES `ability` (`ability_id`)
+);
+
+CREATE TABLE users (
+  id INT(11) NOT NULL AUTO_INCREMENT,
+  login VARCHAR(50) NOT NULL,
+  password_hash VARCHAR(255) NOT NULL,
+  pers_id INT NOT NULL,
+  FOREIGN KEY(pers_id) REFERENCES person(person_id),
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE admins (
+  id INT(11) NOT NULL AUTO_INCREMENT,
+  login VARCHAR(50) NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  PRIMARY KEY (id)
+);
+
+INSERT INTO ability VALUES(1, 'Прохождение сквозь стены');
+INSERT INTO ability VALUES(2, 'Регенерация');
+INSERT INTO ability VALUES(3, 'Возможность летать');
+
+insert admins(login,password) values('admin',123);
+
+set foreign_key_checks = 0;
+truncate person;
+truncate users;
+truncate personAbility;
+set foreign_key_checks = 1;
